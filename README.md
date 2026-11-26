@@ -1,28 +1,29 @@
-# 研究成果总览 (Research Overview)
+# AI 研究项目总览 (AI Research Projects Overview)
 
-本仓库用于统一整理、归档和展示已有的科研成果与学术发表记录，方便后续补充论文资料、维护引用信息以及与团队成员共享。
+本仓库用于统一收纳、管理和追踪多个尚未发表的 AI 研究项目，涵盖实验代码、配置文件、论文草稿、研究笔记与阶段性结果汇总。
 
-## 论文与发表总览 (Publications Overview)
+## 研究项目总览 (Projects Overview)
 
-| 编号 | 年份 | 标题 | 作者 | 期刊 / 会议 | 状态 | 资料与链接 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 编号 | 项目名称 | 研究方向 | 当前阶段 | 核心简介 | 目录 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 
 > [!NOTE]
-> 表格条目将在上传具体论文资料后陆续补充完善。
+> 常见阶段标识：`构思中` / `实验中` / `撰写中` / `投稿准备中` / `归档`。导入本地项目后将陆续补充至上表。
 
 ## 目录结构
 
-- `papers/`：存放各篇论文的正文 PDF、稿件、补充材料与单篇笔记（建议按 `YYYY-关键词/` 子目录存放）
-- `docs/publications.bib`：汇总所有论文的 BibTeX 引用条目
+```text
+research-overview/
+├── README.md                  # 仓库总览与项目索引表
+├── .gitignore                 # 排除权重、数据集、缓存、虚拟环境与密钥文件
+└── projects/
+    ├── README.md              # 多项目收纳规范与导入说明
+    ├── _template/
+    │   └── README.md          # 单个 AI 研究项目说明模板
+    └── <project-slug>/        # 各独立 AI 研究项目目录
+```
 
-## 更新方式
+## 同步与大文件说明
 
-1. 在 `papers/` 下新建以 `YYYY-关键词/` 命名的子目录，放入论文 PDF、补充材料及 `notes.md`。
-2. 在本文件上方的总览表格中新增一行记录，并附上对应目录或外部链接。
-3. 将对应论文的 BibTeX 引用条目追加到 `docs/publications.bib`。
-4. 提交并推送到 GitHub：
-   ```bash
-   git add .
-   git commit -m "Add paper: <paper-short-name>"
-   git push
-   ```
+- **自动忽略内容**：`.gitignore` 已默认排除模型权重与检查点（`.pt`、`.pth`、`.ckpt`、`.safetensors`、`.onnx`、`.bin` 等）、原始/处理后数据集、训练日志与缓存（`wandb/`、`mlruns/`、`runs/`、`.cache/` 等）、Python 虚拟环境以及 `.env` 等密钥配置文件。
+- **公开仓库安全提示**：由于本仓库为 **Public（公开）**，请勿提交包含 API Key、私钥、服务器密码或受限隐私数据的文件。

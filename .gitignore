@@ -1,18 +1,79 @@
-# OS files
-.DS_Store
-Thumbs.db
-Desktop.ini
+# Python & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.conda/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
 
-# Office temp files
-~$*
+# Model weights, checkpoints & serialized binaries
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.pb
+*.h5
+*.hdf5
+*.tflite
+*.gguf
+*.ggml
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+checkpoints/
+weights/
+pretrained/
+saved_models/
 
-# Editor directories
-.vscode/
-.idea/
+# Datasets, archives & caches
+datasets/
+data/raw/
+data/processed/
+*.parquet
+*.arrow
+*.lmdb
+*.tfrecord*
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+.cache/
+.hf_cache/
+
+# Training logs & experiment trackers
+wandb/
+mlruns/
+lightning_logs/
+runs/
+tb_logs/
+events.out.tfevents*
+outputs/
+logs/
+*.log
+
+# Secrets & env files (important for a Public repo)
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.*
+api_keys.*
 
 # LaTeX build artifacts
 *.aux
-*.log
 *.out
 *.toc
 *.bbl
@@ -20,3 +81,14 @@ Desktop.ini
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.nav
+*.snm
+*.vrb
+
+# OS & editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+.vscode/
+.idea/

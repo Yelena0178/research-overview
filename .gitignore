@@ -1,79 +1,6 @@
-# Python & virtual environments
-__pycache__/
-*.py[cod]
-*$py.class
-*.egg-info/
-.venv/
-venv/
-env/
-.conda/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.ipynb_checkpoints/
-
-# Model weights, checkpoints & serialized binaries
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.bin
-*.onnx
-*.pb
-*.h5
-*.hdf5
-*.tflite
-*.gguf
-*.ggml
-*.pkl
-*.pickle
-*.joblib
-*.npy
-*.npz
-checkpoints/
-weights/
-pretrained/
-saved_models/
-
-# Datasets, archives & caches
-datasets/
-data/raw/
-data/processed/
-*.parquet
-*.arrow
-*.lmdb
-*.tfrecord*
-*.tar
-*.tar.gz
-*.tgz
-*.zip
-*.7z
-*.rar
-.cache/
-.hf_cache/
-
-# Training logs & experiment trackers
-wandb/
-mlruns/
-lightning_logs/
-runs/
-tb_logs/
-events.out.tfevents*
-outputs/
-logs/
-*.log
-
-# Secrets & env files (important for a Public repo)
-.env
-.env.*
-*.pem
-*.key
-credentials.json
-secrets.*
-api_keys.*
-
 # LaTeX build artifacts
 *.aux
+*.log
 *.out
 *.toc
 *.bbl
@@ -84,8 +11,52 @@ api_keys.*
 *.nav
 *.snm
 *.vrb
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.bcf
+*.run.xml
 
-# OS & editors
+# Python / Jupyter / computing caches & virtual envs
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.conda/
+.ipynb_checkpoints/
+.pytest_cache/
+.cache/
+
+# Oversized numerical outputs & archives
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.vtk
+*.vtu
+*.parquet
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+
+# Secrets & env files
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.*
+api_keys.*
+
+# OS & editor files
 .DS_Store
 Thumbs.db
 Desktop.ini
